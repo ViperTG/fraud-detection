@@ -42,7 +42,7 @@ In this step, you will create an S3 bucket, upload files to the s3 bucket and us
 
 12. Once CloudFormation status changes to CREATE_COMPLETE, go to the Outputs section.
 
-13. Make a note of the Output values from the CloudFormation environment that you launched as you will need them for the remainder of the tutorial:
+13. Make a note of the Output values from the CloudFormation environment that you launched as you will need them for the remainder of the tutorial.
 
 
 
