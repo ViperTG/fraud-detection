@@ -4,7 +4,7 @@ In this step, you will create an S3 bucket, upload files to the s3 bucket and us
 
 
 
-## Bucket Creation
+## Steps
 1. Open the AWS S3 console, and click on Create Bucket in the right-hand corner.
 
 2. Enter a bucket name-it must be unique! Note down your bucket name as you will need to enter this bucket name in a subsequent step. Scroll to the bottom and click Create Bucket in lower right corner.
