@@ -53,6 +53,28 @@ Get bootstrap servers
 
 These bootstrap servers will be needed for the next step. For safe keeping, save the bootstrap servers to a text file.
 
+## KINESIS DATA ANALYTICS
+In this section, Kinesis Data Analytics the Kafka bootstrap servers will be entered into the properties for the Kinesis data analytics application so the application can connect to Kafka.
+
+1. Go to the Kinesis Data Analytics console interface. Click on Kineis Data Analytics Application created by the CloudFormation script.
+
+
+2. On the Data Analytics application page, click on Configure
+
+
+3. Scroll down to the Networking section on the same page. Under VPC Connectivity click on the radio button to select VPC configuration based on Amazon MSK cluster. Choose the MSK cluster.
+
+
+4. Scroll down to Runtime properties on this page. Paste the bootstrap servers into the Value column for the bootstrap.servers
+
+
+5. Scroll down to the bottom and click Save Changes . It will initiate update to the configuration and take you back to Data Analytics application page.
+
+6. Once it finish applying updates, On the Data Analytics application page, click on Run
+
+
+7. Click Run
+
 
 
 
