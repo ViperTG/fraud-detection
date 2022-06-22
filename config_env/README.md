@@ -13,7 +13,7 @@ In this step, you will create an S3 bucket, upload files to the s3 bucket and us
 
 4. In the next step, files will be Uploaded to the newly created S3 bucket. Download these files to your device so they can be uploaded to S3 in the next step. Using the Download Linked Files option works well. These are the necessary files:
 
-    **Asset** resource：[solnday_cfn.jason](config_env/solnday_cfn.json)
+    **Asset** resource：[solnday_cfn.jason](blob/main/config_env/solnday_cfn.json)
 
 
 
