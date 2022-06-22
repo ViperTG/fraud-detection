@@ -39,15 +39,12 @@ In this section, Managed Streaming for Kafka will be used to find the Kafka boot
 
 1. Go to the Managed Streaming for Kafka console interface. Navigate to the MSK Clusters page. If you end up on the main page instead of the clusters page, click on the three dashes on the upper left corner of the page to reveal the navigation to the clusters page. Finally, click on the MSK cluster name created by the startup script.
 
-MSK navigationMSK navigation 2MSK navigation 3
 
 2. o get the bootstrap servers needed for later connection to this Kafka cluster, Click on View Client Information
 
-MSK view client
 
 3. Click on the copy icon to the left of the plaintext version of the bootstrap servers.
 
-Get bootstrap servers
 
 
 
