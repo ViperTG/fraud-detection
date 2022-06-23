@@ -35,6 +35,9 @@ In this section, we will generate flagged customers and transactions against the
 5. Click on the Search for View Messages
 
 
+# Create Flagged Transactions 
+
+
 ## Steps
 1. Go to the AWS Lambda. Click on the link for the ‘FlagAccountGenerator’ lambda function.
 
