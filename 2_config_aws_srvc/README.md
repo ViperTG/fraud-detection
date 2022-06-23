@@ -75,6 +75,23 @@ In this section, Kinesis Data Analytics the Kafka bootstrap servers will be ente
 
 7. Click Run
 
+## KAFDROP ON EC2
+In this section, an open source docker container application (kafdrop) will run on Amazon EC2. To execute this container, an ssh connection will need to be made from your desktop to an EC2 instance.
+In this section, you will obtain the IP address of your EC2 instance and then continue to your platform specific (mac/windows) instructions to start the kafdrop container.
+
+### GET INSTANCE IP
+
+1. Go to the EC2 console interface. Click on the Instances link.
+
+2. Click on the Instance ID for the EC2 instance created by the CloudFormation script.
+
+3. Click on the copy icon to the left of the Public IPv4 address
+
+
+
+
+
+
 
 
 
