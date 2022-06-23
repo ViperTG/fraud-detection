@@ -82,7 +82,20 @@ In this section, you will obtain the IP address of your EC2 instance and then co
 
 2. Click on the Instance ID for the EC2 instance created by the CloudFormation script.
 
-3. Click on the copy icon to the left of the Public IPv4 address
+3. Click on the copy icon to the left of the Public IPv4 address.
+
+### CONFIGURE WORKSTATION FOR KAFDROP
+
+1. Using IP from previous section, login to the EC2 instance from desktop
+
+[copy content="chmod 400 ~/Downloads/ee-default-keypair.pem
+ssh -i ~/Downloads/ee-default-keypair.pem ec2-user@<ip address from above>
+"]
+
+
+
+
+
 
 
 
