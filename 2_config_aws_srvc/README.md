@@ -89,7 +89,7 @@ In this section, you will obtain the IP address of your EC2 instance and then co
 1. Using IP from previous section, login to the EC2 instance from desktop
 
 <code>chmod 400 ~/Downloads/ee-default-keypair.pem
-ssh -i ~/Downloads/ee-default-keypair.pem ec2-user@<ip address from above>
+ssh -i ~/Downloads/ee-default-keypair.pem ec2-user@ip_address_from_above
 </code>
 
 
