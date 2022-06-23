@@ -94,6 +94,7 @@ ssh -i ~/Downloads/ee-default-keypair.pem ec2-user@ip_address_from_above
 
 2. On the EC2 instance, start the docker container. NOTE: You will need the bootstrap server you copied in the earlier “Managed Streaming for Kafka” section.
 <code>
+
 export bootstrap=<Paste MSK Bootstrap String>
 docker run -d --rm -p 9000:9000 \
 -e KAFKA_BROKERCONNECT=$bootstrap \
@@ -103,6 +104,11 @@ obsidiandynamics/kafdrop:latest
 
 </code>
 
+## ENSURE KAFDROP IS WORKING
+
+1. Open a browser window using http://1.2.3.4:9000 NOTE: Substitute 1.2.3.4 with the public IP address obtained from the EC2 Instance.
+
+2. Check the demo sample transaction topic transactions. NOTE: If the connection times out, it is a security group issue or a VPN is blocking port 9000.
 
 
 
