@@ -16,54 +16,45 @@ In this section, we will generate flagged customers and transactions against the
           
               * Processed_topic
                  * Topic to hold flagged transactions (populated by flink application)
-              * Initially, this topic will also be empty but will become populated once the sample transaction can successfully join with Flagged Accounts
+                 * Initially, this topic will also be empty but will become populated once the sample transaction can successfully join with Flagged Accounts
 
 
 
 
+# Verify Kafka Demo Transactions
 
+## Steps
+1. Open a browser window using http://1.2.3.4:9000 NOTE: Substitute 1.2.3.4 with the public IP address obtained from the EC2 Instance.
+
+2. Explore the kafdrop interface to see messages in the following topics:
+
+3. Click on the demo_transactions topic
+
+4. Note the Last Offset is greater than zero showing there are messages in this topic. Click on View Messages
+
+5. Click on the Search for View Messages
 
 
 ## Steps
-1. Open the AWS S3 console, and click on Create Bucket in the right-hand corner.
+1. Go to the AWS Lambda. Click on the link for the ‘FlagAccountGenerator’ lambda function.
 
-2. Enter a bucket name-it must be unique! Note down your bucket name as you will need to enter this bucket name in a subsequent step. Scroll to the bottom and click Create Bucket in lower right corner.
+2. From the Function interface, Click on the Function name FlagAccountGenerator.py. This will display the python code for this lambda function. Click on the test button and select the Configure test event drop down.
 
-3. Once the bucket is created, find the bucket in the list of buckets and click the link to open the bucket. From the Objects tab of the s3 console, click on the Upload button.
+3. Enter an Event name of helloworld and click Create.
 
-4. In the next step, files will be Uploaded to the newly created S3 bucket. Download these files to your device so they can be uploaded to S3 in the next step. Using the Download Linked Files option works well. These are the necessary files:
+4. From the Test Drop Down, Select helloworld
 
-    **Asset** resource：[solnday_cfn.json](solnday_cfn.json)
+5. Click the Test button to execute the FlagAccountGen function.
 
-    **Asset** resource：[lambda-functions.zip](lambda-functions.zip)
+#  Verify Kafka Processed Transactions
 
-    **Asset** resource：[PythonKafkaSink.zip](lPythonKafkaSink.zip)
+## Steps
+1. Open a browser window using http://1.2.3.4:9000 NOTE: Substitute 1.2.3.4 with the public IP address obtained from the EC2 Instance.
 
-5. Upload the files to the S3 bucket. Click on Add files and follow the interface to upload the files including clicking the Upload button.
-6. Upload the files to the S3 bucket. Click on Add files and follow the interface to upload the files including clicking the Upload button.
-7. Select Template is ready, and choose Upload a template file as the source template. Then, click on Choose file and upload the [solnday_cfn.json](solnday_cfn.json). Click Next.
-8. Populate the form as with the values specified below, and then click Next.
+2. Explore the kafdrop interface to see messages in the following topics:
 
+3. Click on the flagged_customers topic
 
+4. Note the Last Offset is greater than zero showing there are messages in this topic. Click on View Messages
 
-   Stack Name:  A unique identifier without spaces using only lower case letters.
-
-   BucketName:  The s3 bucket name created above. This parameter is only the bucket name itself and can not have a folder. Do not user the URL or the s3 prefix. Only the bucket name
-
-   KeyName:  The KeyPair (ee-default-keypair.pem) that you created in the previous step.
-
-   SourceIPAddr:  The IP address range allowed access to the public subnet. This can be changed to only access your current IP address. In this case change this paramater to /32. One way to get your IP address is to place http://checkip.amazonaws.com in a browser window. It will return your IP address.
-
-9. On the Stack Options page, accept all of the defaults and click Next.
-
-10. On the Review page, Select the button saying I acknowledge that AWS CloudFormation might create IAM resrouces. Then, click Create stack.
-
-11. At this point, you will be directed back to the CloudFormation console and will see a status of CREATE_IN_PROGRESS. Please wait here until the status changes to COMPLETE
-
-12. Once CloudFormation status changes to CREATE_COMPLETE, go to the Outputs section.
-
-13. Make a note of the Output values from the CloudFormation environment that you launched as you will need them for the remainder of the tutorial.
-
-
-
-
+5. Click on the Search for View Messages
