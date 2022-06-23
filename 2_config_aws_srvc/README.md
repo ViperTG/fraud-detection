@@ -39,19 +39,38 @@ In this section, Managed Streaming for Kafka will be used to find the Kafka boot
 
 1. Go to the Managed Streaming for Kafka console interface. Navigate to the MSK Clusters page. If you end up on the main page instead of the clusters page, click on the three dashes on the upper left corner of the page to reveal the navigation to the clusters page. Finally, click on the MSK cluster name created by the startup script.
 
-MSK navigationMSK navigation 2MSK navigation 3
 
 2. o get the bootstrap servers needed for later connection to this Kafka cluster, Click on View Client Information
 
-MSK view client
 
 3. Click on the copy icon to the left of the plaintext version of the bootstrap servers.
 
-Get bootstrap servers
 
 
 
 These bootstrap servers will be needed for the next step. For safe keeping, save the bootstrap servers to a text file.
+
+## KINESIS DATA ANALYTICS
+In this section, Kinesis Data Analytics the Kafka bootstrap servers will be entered into the properties for the Kinesis data analytics application so the application can connect to Kafka.
+
+1. Go to the Kinesis Data Analytics console interface. Click on Kineis Data Analytics Application created by the CloudFormation script.
+
+
+2. On the Data Analytics application page, click on Configure
+
+
+3. Scroll down to the Networking section on the same page. Under VPC Connectivity click on the radio button to select VPC configuration based on Amazon MSK cluster. Choose the MSK cluster.
+
+
+4. Scroll down to Runtime properties on this page. Paste the bootstrap servers into the Value column for the bootstrap.servers
+
+
+5. Scroll down to the bottom and click Save Changes . It will initiate update to the configuration and take you back to Data Analytics application page.
+
+6. Once it finish applying updates, On the Data Analytics application page, click on Run
+
+
+7. Click Run
 
 
 
