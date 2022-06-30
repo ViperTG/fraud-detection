@@ -88,19 +88,17 @@ In this section, you will obtain the IP address of your EC2 instance and then co
 
 1. Using IP from previous section, login to the EC2 instance from desktop
 
-<code>chmod 400 ~/Downloads/ee-default-keypair.pem
-ssh -i ~/Downloads/ee-default-keypair.pem ec2-user@ip_address_from_above
-</code>
+```bash
+    chmod 400 ~/Downloads/ee-default-keypair.pem
+    ssh -i ~/Downloads/ee-default-keypair.pem ec2-user@ip_address_from_above
+```
 
 2. On the EC2 instance, start the docker container. NOTE: You will need the bootstrap server you copied in the earlier “Managed Streaming for Kafka” section.
-<code>
+
+```bash
 export bootstrap=<Paste MSK Bootstrap String>
-docker run -d --rm -p 9000:9000 \
--e KAFKA_BROKERCONNECT=$bootstrap \
--e JVM_OPTS="-Xms32M -Xmx64M" \
--e SERVER_SERVLET_CONTEXTPATH="/" \
-obsidiandynamics/kafdrop:latest
-</code>
+docker run -d --rm -p 9000:9000 -e KAFKA_BROKERCONNECT=$bootstrap -e JVM_OPTS="-Xms32M -Xmx64M" -e SERVER_SERVLET_CONTEXTPATH="/" obsidiandynamics/kafdrop:latest
+```
 
 ## ENSURE KAFDROP IS WORKING
 
