@@ -20,7 +20,7 @@ In this step, you will create an S3 bucket, upload files to the s3 bucket and us
     **Asset** resource：[PythonKafkaSink.zip](lPythonKafkaSink.zip)
 
 5. Upload the files to the S3 bucket. Click on Add files and follow the interface to upload the files including clicking the Upload button.
-6. Upload the files to the S3 bucket. Click on Add files and follow the interface to upload the files including clicking the Upload button.
+6. Open the AWS CloudFormation console, and click on Create Stack in the left-hand corner.
 7. Select Template is ready, and choose Upload a template file as the source template. Then, click on Choose file and upload the [solnday_cfn.json](solnday_cfn.json). Click Next.
 8. Populate the form as with the values specified below, and then click Next.
 
